@@ -34,5 +34,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
+    - name: check folder
+      run: ls -1
     - name: Send greeting
       run: mysql -u gestor -p Abcd1234 -h ${{ github.event.inputs.name }} < ${{ github.event.inputs.query }}
