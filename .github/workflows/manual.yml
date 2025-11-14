@@ -18,6 +18,12 @@ on:
         # The data type of the input
         type: string
 
+      query:
+        description: 'Query Testar'
+        default: 'create.sql'
+        required: true
+        type: string
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -30,3 +36,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: mysql -u gestor -p Abcd1234 -h ${{ input.name }}
+           mysql -u username -p < ${{ input.query }}
