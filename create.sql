@@ -5,3 +5,4 @@ CREATE TABLE `livros` (
   PRIMARY KEY (`livro_id`),
   UNIQUE KEY `codigo_UNIQUE` (`codigo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+USE TABLE `livros`;
