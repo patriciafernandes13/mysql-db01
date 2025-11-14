@@ -18,12 +18,6 @@ on:
         # The data type of the input
         type: string
 
-      query:
-        description: 'Query Testar'
-        default: 'create.sql'
-        required: true
-        type: string
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -35,9 +29,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - uses: actions/checkout@v4
-    - name: check folder
-      run: ls -1
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
     - name: Testar Ligação
